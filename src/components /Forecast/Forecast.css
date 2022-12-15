@@ -1,0 +1,26 @@
+.Forecast {
+}
+
+.Forecast .Temp {
+  display: flex;
+}
+
+.Forecast .Temp_Value {
+  font-size: 4rem;
+}
+
+.Forecast .Deg_Options {
+  display: inline-block;
+}
+
+.Forecast button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.Forecast button:hover {
+  color: gray;
+}

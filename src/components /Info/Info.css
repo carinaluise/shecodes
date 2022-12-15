@@ -1,0 +1,32 @@
+.Info {
+}
+
+.Info h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+  margin-top: 40px;
+  font-weight: normal;
+}
+
+.Info ul {
+  padding: 1rem;
+}
+
+.Info li {
+  padding: 0.2rem;
+}
+
+@media only screen and (min-width: 1300px) {
+  .Info li:nth-child(3),
+  li:nth-child(4) {
+    position: absolute;
+  }
+  .Info li:nth-child(3) {
+    top: 330px;
+    left: 1000px;
+  }
+  .Info li:nth-child(4) {
+    top: 354px;
+    left: 1000px;
+  }
+}
