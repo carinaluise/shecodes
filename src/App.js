@@ -12,6 +12,7 @@ function App() {
           <Search />
           <Info />
         </article>
+        <aside>Repo: https://github.com/carinaluise/shecodes</aside>
       </main>
     </div>
   );
