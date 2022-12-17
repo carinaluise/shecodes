@@ -3,14 +3,36 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .App {
   margin-top: 50px;
-  max-width: 80vw;
-  font-family: Arial, sans-serif;
+  width: 50vw;
   border-style: solid;
   border-color: gainsboro;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 0.5rem;
+}
+
+footer {
+  line-height: 2rem;
+  margin-top: 2rem;
+  border-style: solid;
+  border-color: gainsboro;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: gray;
 }

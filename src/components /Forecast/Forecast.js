@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Forecast.css";
 
-const Forecast = () => {
-  const refreshPage = () => {
-    window.location.reload();
-  };
+const Forecast = ({ city, temp, img, description, humidity, wind }) => {
+  const [temperature, setTemp] = useState(temp);
+
+  function handleFahrenheit(e) {
+    e.preventDefault();
+    setTemp(Math.round(temp * 1.8 + 32));
+  }
+
+  function handleCelcius(e) {
+    e.preventDefault();
+    setTemp(temp);
+  }
+
   return (
     <div className="Forecast">
-      <img
-        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-        alt="weather-icon"
-      />
+      <h2>{city}</h2>
+      <section className="Info">
+        <ul>
+          <li>{description}</li>
+          <li>humidity : {humidity}</li>
+          <li>wind : {wind}km/h</li>
+        </ul>
+      </section>
+      <img src={img} alt="weather-icon" />
       <div className="Temp">
-        <span className="Temp_Value">19</span>
+        <span className="Temp_Value">{temperature}</span>
         <div className="Deg_Options">
-          <button onClick={refreshPage}>°C</button>
+          <button onClick={handleCelcius}>°C</button>
           <span>|</span>
-          <button onClick={refreshPage}>°F</button>
+          <button onClick={handleFahrenheit}>°F</button>
         </div>
       </div>
     </div>
