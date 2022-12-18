@@ -6,6 +6,11 @@
   border-radius: 0.5rem;
 }
 
+.Forecast h2 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
 .Forecast .Temp {
   display: flex;
 }
@@ -30,7 +35,9 @@
   color: gray;
 }
 
-ul {
+.Info ul {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
   list-style: none;
   padding: 0;
 }

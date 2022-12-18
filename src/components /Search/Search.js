@@ -17,6 +17,7 @@ const Search = () => {
     axios
       .get(url)
       .then((res) => {
+        console.log(res);
         setResult({
           temp: Math.round(res.data.main.temp),
           description: res.data.weather[0].description,
@@ -39,8 +40,8 @@ const Search = () => {
   }
 
   return (
-    <div>
-      <div className="Search">
+    <div className="Search">
+      <div>
         <form onSubmit={handleSubmit}>
           <input onChange={handleChange} value={city} placeholder="City Name" />
           <button>Search</button>

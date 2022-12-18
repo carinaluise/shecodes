@@ -10,17 +10,23 @@
   border-color: lightgray;
 }
 
-.Search button {
+.Search input:focus {
+  border-color: black !important;
+}
+
+.Search form button {
   font-size: 1.2rem;
   cursor: pointer;
   width: 10vw;
   padding: 0.5rem;
-  background-color: dodgerblue;
+  background-color: white;
   border-radius: 0.5rem;
-  border-style: none;
-  color: white;
+  border-style: solid;
+  border-color: gainsboro;
+  color: black;
 }
 
-.Search button:hover {
-  background-color: steelblue;
+.Search form button:hover {
+  background-color: black;
+  color: white;
 }

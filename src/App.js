@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
 
+import "./App.css";
 import Search from "./components /Search/Search";
 
 function App() {
   return (
     <div>
-      <section className="App">
+      <main className="App">
         <h1>Weather App</h1>
         <Search />
-      </section>
+      </main>
       <footer>
         <p>
           This is an opensource project, find repo here: <br />
