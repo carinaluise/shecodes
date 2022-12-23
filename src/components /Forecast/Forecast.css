@@ -11,18 +11,6 @@
   font-size: 2rem;
 }
 
-.Forecast .Temp {
-  display: flex;
-}
-
-.Forecast .Temp_Value {
-  font-size: 4rem;
-}
-
-.Forecast .Deg_Options {
-  display: inline-block;
-}
-
 .Forecast button {
   cursor: pointer;
   border: none;
@@ -35,7 +23,11 @@
   color: gray;
 }
 
-.Info ul {
+.Forecast img {
+  width: 80px;
+}
+
+.Forecast ul {
   line-height: 2.5rem;
   font-size: 1.5rem;
   list-style: none;

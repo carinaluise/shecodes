@@ -1,14 +1,14 @@
 import React from "react";
 
 import "./App.css";
-import Search from "./components /Search/Search";
+import Weather from "./components /Weather/Weather";
 
 function App() {
   return (
-    <div>
-      <main className="App">
+    <div className="App">
+      <main>
         <h1>Weather App</h1>
-        <Search />
+        <Weather />
       </main>
       <footer>
         <p>

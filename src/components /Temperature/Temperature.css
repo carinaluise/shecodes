@@ -1,0 +1,11 @@
+.Temp {
+  display: flex;
+}
+
+.Temp .Temp_Value {
+  font-size: 4rem;
+}
+
+.Temp .Temp_Metric {
+  display: inline-block;
+}

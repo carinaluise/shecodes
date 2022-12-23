@@ -1,0 +1,13 @@
+.DateTime {
+}
+
+.DateTime_Date {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.DateTime_Time {
+  margin-top: 0;
+  font-size: 16px;
+  color: gray;
+}

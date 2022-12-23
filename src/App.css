@@ -16,23 +16,23 @@ body {
   border-radius: 0.5rem;
 }
 
-footer {
+.App h1 {
+  font-size: 3rem;
+}
+
+.App a {
+  color: black;
+}
+
+.App a:visited {
+  color: gray;
+}
+
+.App footer {
   line-height: 2rem;
   margin-top: 2rem;
   border-style: solid;
   border-color: gainsboro;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-a {
-  color: black;
-}
-
-a:visited {
-  color: gray;
 }
