@@ -1,0 +1,16 @@
+.Day {
+}
+
+.Day img {
+  display: block;
+  margin: 1rem 0;
+}
+
+.Day span {
+  margin: 1rem 0;
+}
+
+.Day span:last-of-type {
+  color: grey;
+  margin-left: 0.5rem;
+}

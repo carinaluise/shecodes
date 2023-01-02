@@ -23,19 +23,21 @@ const Weather = () => {
   }
 
   function search() {
-    let apiID = "3a94f3778290bfeee61278505dbbe51d";
+    let apiID = "ca5af28648d86b7925348bb9fb85cd3a";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiID}&units=metric`;
 
     axios
       .get(url)
       .then((res) => {
+        console.log(res);
         setWeather({
           loaded: true,
+          coord: res.data.coord,
           temp: Math.round(res.data.main.temp),
           description: res.data.weather[0].description,
           humidity: res.data.main.humidity,
           wind: res.data.wind.speed,
-          img: `http://openweathermap.org/img/w/${res.data.weather[0].icon}.png`,
+          icon: res.data.weather[0].icon,
           date: new Date(res.data.dt * 1000),
         });
       })
@@ -62,7 +64,8 @@ const Weather = () => {
             description={weather.description}
             humidity={weather.humidity}
             wind={weather.wind}
-            img={weather.img}
+            icon={weather.icon}
+            coord={weather.coord}
           />
         </div>
       )}
