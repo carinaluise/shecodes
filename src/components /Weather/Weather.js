@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Forecast from "../Forecast/Forecast";
-import DateTime from "../DateTime/DateTime";
 import "./Weather.css";
 
 const Weather = () => {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Berlin");
   const [weather, setWeather] = useState({});
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    search();
+    setCity("");
+  }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
     search();
+    setCity("");
   }
 
   function handleChange(event) {
     event.preventDefault();
-    setWeather(false);
+    setWeather({ loaded: false });
     setError(false);
     setCity(event.target.value);
   }
@@ -29,9 +34,9 @@ const Weather = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res);
         setWeather({
           loaded: true,
+          city: res.data.name,
           coord: res.data.coord,
           temp: Math.round(res.data.main.temp),
           description: res.data.weather[0].description,
@@ -56,18 +61,16 @@ const Weather = () => {
         </form>
       </div>
       {weather.loaded && (
-        <div>
-          <h2>{city}</h2>
-          <DateTime date={weather.date} />
-          <Forecast
-            temp={weather.temp}
-            description={weather.description}
-            humidity={weather.humidity}
-            wind={weather.wind}
-            icon={weather.icon}
-            coord={weather.coord}
-          />
-        </div>
+        <Forecast
+          city={weather.city}
+          date={weather.date}
+          temp={weather.temp}
+          description={weather.description}
+          humidity={weather.humidity}
+          wind={weather.wind}
+          icon={weather.icon}
+          coord={weather.coord}
+        />
       )}
       {error && <h2>Please type in a valid city</h2>}
     </div>

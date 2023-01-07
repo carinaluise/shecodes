@@ -6,30 +6,38 @@
   border-radius: 0.5rem;
 }
 
+.Forecast__Information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  /* margin: 3rem auto; */
+}
+
+/* .Forecast__Information:nth-child(-n + 2) {
+  border: 0.5rem solid black;
+} */
+
+/* .Forecast__Main article {
+
+  margin: 2rem;
+} */
+
+.Forecast canvas {
+  /* margin-left: 1rem; */
+}
+
 .Forecast h2 {
   font-weight: normal;
-  font-size: 2rem;
-}
-
-.Forecast button {
-  cursor: pointer;
-  border: none;
-  background-color: white;
-  text-decoration: underline;
-  font-size: 1rem;
-}
-
-.Forecast button:hover {
-  color: gray;
-}
-
-.Forecast img {
-  width: 80px;
+  font-size: 2.5rem;
+  margin-bottom: 0;
 }
 
 .Forecast ul {
-  line-height: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-top: 3rem;
   list-style: none;
   padding: 0;
 }

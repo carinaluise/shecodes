@@ -1,11 +1,7 @@
-.Temp {
-  display: flex;
-}
-
 .Temp .Temp_Value {
-  font-size: 4rem;
+  font-size: 8rem;
 }
 
-.Temp .Temp_Metric {
-  display: inline-block;
+.Temp--small {
+  display: inline;
 }

@@ -6,7 +6,7 @@ const DateTime = ({ date }) => {
   return (
     <div className="DateTime">
       <p className="DateTime_Date">{date.toDateString()}</p>
-      <p className="DateTime_Time"> {date.toTimeString()}</p>
+      <p className="DateTime_Time"> {date.toLocaleTimeString()}</p>
     </div>
   );
 };

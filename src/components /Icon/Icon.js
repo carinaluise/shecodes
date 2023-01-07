@@ -25,10 +25,11 @@ export default function WeatherIcon({ icon, size }) {
 
   return (
     <ReactAnimatedWeather
+      className="Icon"
       icon={codeMapping[icon]}
       color="#1e1e1e"
       size={size}
-      animate={false}
+      animate={true}
     />
   );
 }

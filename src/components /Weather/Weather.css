@@ -1,11 +1,6 @@
 .Weather {
 }
 
-.Weather h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0;
-}
-
 .Weather input {
   margin-right: 2rem;
   width: 35vw;

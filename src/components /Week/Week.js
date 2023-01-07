@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Week.css";
 import Day from "../Day/Day";
 
-const Week = ({ coord, icon }) => {
+const Week = ({ coord }) => {
   const [weekData, setWeekData] = useState();
 
   useEffect(() => {
@@ -16,8 +16,10 @@ const Week = ({ coord, icon }) => {
     axios
       .get(url)
       .then((res) => {
+        const limitedData = res.data.daily.slice(0, 5);
+        console.log(limitedData);
         setWeekData({
-          daily: [...res.data.daily],
+          daily: [...limitedData],
         });
       })
       .catch((err) => {
@@ -30,7 +32,8 @@ const Week = ({ coord, icon }) => {
     <div className="Week">
       {weekData &&
         weekData.daily.map((day) => {
-          return <Day data={day} icon={icon} />;
+          console.log(day);
+          return <Day data={day} icon={day.weather[0].icon} />;
         })}
     </div>
   );

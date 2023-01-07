@@ -1,16 +1,21 @@
 .Day {
 }
 
-.Day img {
-  display: block;
-  margin: 1rem 0;
+.Day__Name {
+  text-align: center;
+  margin-bottom: 0;
 }
 
-.Day span {
-  margin: 1rem 0;
+.Day canvas {
+  display: block;
+  margin: 2rem auto;
 }
 
 .Day span:last-of-type {
   color: grey;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem; */
+}
+
+.MinMax__Seperator {
+  color: black !important;
 }
