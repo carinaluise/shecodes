@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import Forecast from "../Forecast/Forecast";
@@ -9,20 +9,15 @@ const Weather = () => {
   const [weather, setWeather] = useState({});
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    search();
-    setCity("");
-  }, []);
+  let display;
 
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    setCity("");
   }
 
   function handleChange(event) {
     event.preventDefault();
-    setWeather({ loaded: false });
     setError(false);
     setCity(event.target.value);
   }
@@ -45,6 +40,7 @@ const Weather = () => {
           icon: res.data.weather[0].icon,
           date: new Date(res.data.dt * 1000),
         });
+        setCity("");
       })
       .catch((err) => {
         console.log(`Error: ${err}`);
@@ -52,27 +48,35 @@ const Weather = () => {
       });
   }
 
+  if (weather.loaded) {
+    display = (
+      <Forecast
+        city={weather.city}
+        date={weather.date}
+        temp={weather.temp}
+        description={weather.description}
+        humidity={weather.humidity}
+        wind={weather.wind}
+        icon={weather.icon}
+        coord={weather.coord}
+      />
+    );
+  }
+
+  if (!weather.loaded) {
+    search();
+  }
+
   return (
     <div className="Weather">
       <div>
         <form onSubmit={handleSubmit}>
+          {error && <p>Please enter a valid city</p>}
           <input onChange={handleChange} value={city} placeholder="City Name" />
           <button>Search</button>
         </form>
       </div>
-      {weather.loaded && (
-        <Forecast
-          city={weather.city}
-          date={weather.date}
-          temp={weather.temp}
-          description={weather.description}
-          humidity={weather.humidity}
-          wind={weather.wind}
-          icon={weather.icon}
-          coord={weather.coord}
-        />
-      )}
-      {error && <h2>Please type in a valid city</h2>}
+      {display}
     </div>
   );
 };

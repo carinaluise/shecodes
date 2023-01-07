@@ -25,7 +25,7 @@ const Week = ({ coord }) => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [coord.lat, coord.lon]);
 
   console.log(weekData);
   return (
