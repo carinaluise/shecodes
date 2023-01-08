@@ -1,6 +1,11 @@
 .Week {
   display: flex;
-  /* margin: 3rem auto; */
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 75%;
+}
+
+@media screen and (min-width: 1200px) {
+  .Week {
+    width: 75%;
+  }
 }

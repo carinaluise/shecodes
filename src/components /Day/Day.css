@@ -8,12 +8,11 @@
 
 .Day canvas {
   display: block;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .Day span:last-of-type {
   color: grey;
-  /* margin-left: 0.5rem; */
 }
 
 .MinMax__Seperator {

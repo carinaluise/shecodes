@@ -6,7 +6,8 @@ const Temperature = ({ temp, small }) => {
   return (
     <div className={small ? "Temp--small" : "Temp"}>
       <span className="Temp_Value">{temp}</span>
-      <span>°C</span>
+      <span>°</span>
+      {!small && <span>°C</span>}
     </div>
   );
 };

@@ -1,9 +1,9 @@
 .Forecast {
   margin-top: 2rem;
-  border-style: solid;
-  border-color: gainsboro;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: azure;
 }
 
 .Forecast__Information {
@@ -12,26 +12,17 @@
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   gap: 2rem;
-  width: 50%;
-  /* margin: 3rem auto; */
 }
 
-/* .Forecast__Information:nth-child(-n + 2) {
-  border: 0.5rem solid black;
-} */
-
-/* .Forecast__Main article {
-
-  margin: 2rem;
-} */
-
-.Forecast canvas {
-  /* margin-left: 1rem; */
+@media screen and (min-width: 1200px) {
+  .Forecast__Information {
+    width: 50%;
+  }
 }
 
 .Forecast h2 {
   font-weight: normal;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0;
 }
 

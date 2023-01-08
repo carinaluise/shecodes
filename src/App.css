@@ -2,37 +2,42 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  color: #5b1b63;
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background-color: azure;
+  height: 100vh;
 }
 
 .App {
-  margin-top: 50px;
-  width: 50vw;
-  border-style: solid;
-  border-color: gainsboro;
   padding: 2rem;
+  padding-bottom: 1rem;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(260deg, #b755b8, #3b587d);
+}
+@media screen and (min-width: 1200px) {
+  .App {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 500px) {
+  .App {
+    margin-top: 50px;
+  }
 }
 
 .App h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .App a {
-  color: black;
-}
-
-.App a:visited {
-  color: gray;
+  color: azure;
 }
 
 .App footer {
+  color: azure;
   line-height: 2rem;
   margin-top: 2rem;
-  border-style: solid;
-  border-color: gainsboro;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
 }

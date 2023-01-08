@@ -2,12 +2,14 @@
 }
 
 .Weather input {
+  width: 50vw;
   margin-right: 2rem;
-  width: 35vw;
+  background-color: azure;
   padding: 0.8rem;
-  border: solid 1px;
+  border: solid 0.2px;
   border-radius: 0.5rem;
   border-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Weather input:focus {
@@ -15,18 +17,28 @@
 }
 
 .Weather form button {
+  margin-top: 0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
-  width: 10vw;
   padding: 0.5rem;
-  background-color: white;
+  background-color: azure;
   border-radius: 0.5rem;
-  border-style: solid;
-  border-color: gainsboro;
+  border: solid 0.2px lightgray;
   color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Weather form button:hover {
-  background-color: black;
-  color: white;
+  background-color: purple;
+  color: azure;
+}
+
+@media screen and (min-width: 500px) {
+  .Weather form button {
+    width: 10vw;
+  }
+
+  .Weather input {
+    width: 35vw;
+  }
 }
