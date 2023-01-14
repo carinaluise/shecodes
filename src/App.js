@@ -11,7 +11,7 @@ function App() {
       </main>
       <footer>
         <p>
-          This is an opensource project, find repo here: <br />
+          This is an opensource project made by Carina R - Frontend dev, find repo here: <br />
           <a
             href="https://github.com/carinaluise/shecodes"
             target="_blank"
